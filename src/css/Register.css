@@ -1,0 +1,104 @@
+/* Register.css - Instagram-Inspired Dark Theme */
+
+/* body {
+    background-color: #121212;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #fff;
+} */
+
+.insta-register-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+}
+
+.insta-register-box {
+    background-color: #1e1e1e;
+    padding: 40px 30px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    text-align: center;
+    width: 100%;
+    max-width: 420px;
+    height: 500px;
+}
+
+.insta-logo {
+    font-size: 2.2rem;
+    margin-bottom: 25px;
+    background: linear-gradient(90deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.insta-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.insta-form input {
+    padding: 12px 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-size: 1rem;
+    transition: border 0.3s, box-shadow 0.3s;
+}
+
+.insta-form input:focus {
+    outline: none;
+    border: 1px solid #e1306c;
+    box-shadow: 0 0 8px rgba(255, 105, 180, 0.3);
+}
+
+.insta-form button {
+    padding: 12px;
+    font-size: 1rem;
+    background: linear-gradient(135deg, #d62976, #962fbf);
+    border: none;
+    border-radius: 8px;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.insta-form button:hover {
+    background: linear-gradient(135deg, #ff6ec4, #7873f5);
+}
+
+.insta-login-link {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #aaa;
+}
+
+.insta-login-link a {
+    color: #e1306c;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.insta-login-link a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 500px) {
+    .insta-register-box {
+        padding: 30px 20px;
+    }
+
+    .insta-logo {
+        font-size: 1.8rem;
+    }
+}
+.message{
+    margin-top: 15px;
+}

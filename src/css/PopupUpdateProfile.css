@@ -1,0 +1,130 @@
+/* Dark overlay */
+.popup-form-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.75); /* darker overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Dark popup box */
+.popup-box {
+  background-color: #1e1e1e;
+  padding: 30px 25px;
+  border-radius: 14px;
+  width: 700px;                /* ✅ Set width to 800px */
+  max-width: 100%;              /* ✅ Makes it responsive on smaller screens */
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.05);
+  position: relative;
+  animation: fadeInScale 0.3s ease-in-out;
+  color: #f5f5f5;
+}
+
+
+/* Title */
+.popup-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: 600;
+  color: #ffffff;
+  text-align: center;
+}
+
+/* Form fields */
+.popup-form-field {
+  margin-bottom: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.popup-form-field label {
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #cccccc;
+}
+
+.popup-form-field input,
+.popup-form-field textarea {
+  background-color: #2a2a2a;
+  border: 1px solid #444;
+  padding: 10px 12px;
+  border-radius: 8px;
+  font-size: 14px;
+  color: #ffffff;
+  resize: none;
+  transition: 0.3s ease;
+}
+
+.popup-form-field input:focus,
+.popup-form-field textarea:focus {
+  border-color: #8884ff;
+  outline: none;
+  box-shadow: 0 0 5px rgba(136, 132, 255, 0.5);
+}
+
+/* Buttons */
+.popup-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.popup-submit-btn,
+.popup-cancel-btn {
+  padding: 10px 18px;
+  font-size: 14px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.2s;
+  font-weight: bold;
+}
+
+/* Submit Button (Vibrant green) */
+.popup-submit-btn {
+  background-color: #00b894;
+  color: white;
+}
+
+.popup-submit-btn:hover {
+  background-color: #00a383;
+}
+
+/* Cancel Button (Red) */
+.popup-cancel-btn {
+  background-color: #d63031;
+  color: white;
+}
+
+.popup-cancel-btn:hover {
+  background-color: #b52a2a;
+}
+
+/* Animation */
+@keyframes fadeInScale {
+  0% {
+    opacity: 0;
+    transform: scale(0.8);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Mobile responsive */
+@media (max-width: 480px) {
+  .popup-box {
+    width: 95%;
+    padding: 20px;
+  }
+
+  .popup-title {
+    font-size: 18px;
+  }
+}

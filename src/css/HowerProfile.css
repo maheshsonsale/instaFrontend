@@ -1,0 +1,86 @@
+/* Parent controls visibility */
+.hover-wrapper {
+  position: relative;
+  display: inline-block;
+}
+
+/* Hide the profile card by default */
+.hover-profile-card {
+  position: absolute;
+  top: 120%;
+  left: 0;
+  z-index: 100;
+  width: 300px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 16px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Show card on link hover */
+.hover-wrapper:hover .hover-profile-card {
+  display: block;
+}
+
+/* Profile image */
+.hover-profile-dp {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 16px;
+}
+
+/* Flex for header */
+.hover-profile-header {
+  display: flex;
+  align-items: flex-start;
+}
+
+/* Info section */
+.hover-profile-info {
+  flex: 1;
+}
+
+/* Username and controls */
+.hover-username-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Control buttons and icon */
+.hover-profile-controls {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.hover-profile-controls button {
+  padding: 4px 8px;
+  font-size: 12px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.hover-settings-icon {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+/* Stats (posts, followers, following) */
+.hover-profile-stats {
+  margin-top: 8px;
+  display: flex;
+  gap: 12px;
+  font-size: 14px;
+}
+
+/* Bio */
+.hover-profile-bio {
+  margin-top: 8px;
+  font-size: 14px;
+}

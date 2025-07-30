@@ -1,0 +1,264 @@
+:root {
+    --bg-main: #0e0e0e;
+    --bg-card: #1c1c1e;
+    --text-primary: #f2f2f2;
+    --text-secondary: #a9a9a9;
+    --accent: #3897f0;
+    --accent-hover: #1877f2;
+    --border: #2f2f2f;
+    --comment-bg: #222;
+    --highlight: #30e15c;
+    --gradient-text: linear-gradient(to right, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+}
+
+/* === Global Styling === */
+body {
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* === Feed Container === */
+.feed-container {
+    max-width: 550px;
+    margin: 30px auto;
+    padding: 0 20px;
+    animation: fadeIn 0.6s ease-in-out;
+}
+
+/* === Header === */
+.feed-header {
+    font-size: 30px;
+    font-weight: 800;
+    text-align: center;
+    margin-bottom: 35px;
+    background: var(--gradient-text);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: -0.5px;
+}
+
+/* === No Posts Message === */
+.no-posts {
+    text-align: center;
+    font-size: 18px;
+    color: var(--text-secondary);
+    margin-top: 30px;
+}
+
+/* === Post Card === */
+.post-card {
+    background-color: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+
+/* === Post Header === */
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    margin-bottom: 12px;
+    color: var(--text-secondary);
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.post-pic-name {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex: 1;
+    min-width: 0;
+}
+
+.post-profile-pic {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 2px solid var(--highlight);
+    object-fit: cover;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.post-profile-pic:hover {
+    transform: scale(1.07);
+}
+
+.post-username {
+    font-weight: 600;
+    color: var(--text-primary);
+    cursor: pointer;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+
+.post-time {
+    font-size: 13px;
+    font-style: italic;
+    color: var(--text-secondary);
+    text-align: right;
+}
+
+/* === Image === */
+.post-img {
+    width: 100%;
+    border-radius: 4px;
+    margin: 12px 0;
+}
+
+/* === Content === */
+.post-content {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    word-wrap: break-word;
+    margin-top: 8px;
+}
+
+/* === Actions === */
+.post-actions {
+    display: flex;
+    gap: 14px;
+    margin-top: 15px;
+    flex-wrap: wrap;
+}
+
+.action-btn {
+    padding: 7px 16px;
+    border-radius: 20px;
+    border: 1px solid var(--border);
+    background: transparent;
+    color: var(--text-secondary);
+    cursor: pointer;
+    font-size: 14px;
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.action-btn:hover {
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 0 10px rgba(56, 151, 240, 0.4);
+}
+
+/* === Comment Input === */
+.comment-input {
+    width: 100%;
+    padding: 10px 16px;
+    font-size: 14px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    background-color: var(--bg-main);
+    color: var(--text-primary);
+    outline: none;
+    margin-top: 16px;
+    transition: 0.3s;
+}
+
+.comment-input:focus {
+    border-color: var(--accent);
+    box-shadow: 0 0 6px rgba(56, 151, 240, 0.4);
+}
+
+/* === Comment List === */
+.comment-list {
+    margin-top: 16px;
+    background: var(--comment-bg);
+    border-radius: 12px;
+    padding: 12px;
+    max-height: 240px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: var(--accent) transparent;
+}
+
+.comment-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.comment-list::-webkit-scrollbar-thumb {
+    background-color: var(--accent);
+    border-radius: 6px;
+}
+
+/* === Comment === */
+.comment {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    background: var(--bg-main);
+    border: 1px solid var(--border);
+    padding: 10px 14px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: var(--text-primary);
+    font-size: 14px;
+}
+
+.comment-profilepic {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid var(--highlight);
+    flex-shrink: 0;
+    cursor: pointer;
+}
+
+/* === Animation === */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* === Responsive === */
+@media (max-width: 768px) {
+    .feed-container {
+        padding: 0 12px;
+    }
+
+    .post-card {
+        padding: 16px;
+    }
+
+    .post-username {
+        font-size: 14px;
+    }
+
+    .post-content {
+        font-size: 15px;
+    }
+
+    .comment-input {
+        font-size: 13px;
+        padding: 8px 12px;
+    }
+
+    .action-btn {
+        font-size: 13px;
+        padding: 6px 12px;
+    }
+
+    .feed-header {
+        font-size: 24px;
+    }
+}
