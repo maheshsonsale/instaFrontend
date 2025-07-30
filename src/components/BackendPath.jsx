@@ -1,1 +1,1 @@
-export const BackPath="http://localhost:5000"
+export const BackPath="https://insta-backend-zsgb.vercel.app/"
