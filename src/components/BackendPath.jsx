@@ -1,1 +1,1 @@
-export const BackPath="https://insta-backend-zsgb.vercel.app/"
+export const BackPath="https://insta-backend-zsgb.vercel.app"
